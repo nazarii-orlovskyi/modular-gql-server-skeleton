@@ -1,5 +1,6 @@
-/node_modules/
-/_book/
-/var/
-/coverage/
-/.nyc_output/
+node_modules/
+_book/
+var/
+coverage/
+.nyc_output/
+config/local-development.js

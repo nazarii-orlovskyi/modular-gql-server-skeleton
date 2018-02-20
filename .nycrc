@@ -3,7 +3,14 @@
     "statements": 95,
     "functions": 95,
     "branches": 95,
-    "include": ["./src/modules/**/*.js"],
+    "include": [
+        "src/modules/**/*.js"
+    ],
+    "exclude": [
+        "src/modules/app/**/*.js",
+        "src/modules/**/unit/**/*.js",
+        "src/modules/**/integration/**/*.js"
+    ],
     "reporter": ["lcov", "text"],
     "check-coverage": true
 }

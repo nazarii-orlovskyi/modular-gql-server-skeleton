@@ -4,7 +4,14 @@
         "indent": ["error", 4],
         "no-underscore-dangle": ["error", { "allowAfterThis": true }],
         "class-methods-use-this": ["off"],
-        "import/prefer-default-export": ["off"]
+        "import/prefer-default-export": ["off"],
+        "no-console": ["error"]
+    },
+    "overrides": {
+        "files": "src/index.js",
+        "rules": {
+            "no-console": ["off"]
+        }
     },
     "env": {
         "node": true,
