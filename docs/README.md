@@ -1,0 +1,1 @@
+Це документація для проекту modular-gql-server-sceleton

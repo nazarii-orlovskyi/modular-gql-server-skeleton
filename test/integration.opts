@@ -1,0 +1,3 @@
+--reporter dot
+test/init-integration.js
+src/modules/**/integration/**/*.test.js

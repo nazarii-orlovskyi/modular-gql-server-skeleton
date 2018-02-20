@@ -1,0 +1,32 @@
+version: "3"
+services:
+  node:
+    container_name: "modular-gql-node"
+    build: ./build/development/node
+    restart: "always"
+    environment:
+      - "NODE_ENV=development"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 8080:80
+    command: "npm start"
+
+  db:
+    container_name: "modular-gql-db"
+    image: "mysql:5.7"
+    restart: "always"
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+    ports:
+      - 3306:3306
+    volumes:
+      - ./var/data/mysql:/var/lib/mysql
+
+  db-admin:
+    container_name: "modular-gql-db-admin"
+    image: "adminer"
+    restart: "always"
+    ports:
+      - 8090:8080

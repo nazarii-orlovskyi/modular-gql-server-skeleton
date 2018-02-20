@@ -1,0 +1,3 @@
+--requre test/init-unit.js
+--reporter dot
+src/modules/**/unit/**/*.test.js

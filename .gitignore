@@ -1,0 +1,5 @@
+/node_modules/
+/_book/
+/var/
+/coverage/
+/.nyc_output/

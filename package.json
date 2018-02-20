@@ -1,0 +1,47 @@
+{
+  "name": "modular-gql-server-skeleton",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon",
+    "start": "npm run dev",
+    "test:integration": "NODE_ENV=integration-test mocha --opts test/integration.opts",
+    "test:integration:watch": "NODE_ENV=integration-test mocha --watch --opts test/integration.opts",
+    "test:integration:coverage": "nyc npm run test:integration",
+    "test:unit": "NODE_ENV=unit-test mocha --opts test/unit.opts",
+    "test:unit:watch": "NODE_ENV=unit-test mocha --watch --opts test/unit.opts",
+    "test:unit:coverage": "nyc npm run test:unit",
+    "test": "npm run test:unit && npm run test:integration",
+    "lint": "eslint ./src ./config ./test",
+    "precommit": "npm run lint && npm run test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^1.3.2",
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "config": "^1.29.4",
+    "express": "^4.16.2",
+    "graphql": "^0.13.1",
+    "jsonwebtoken": "^8.1.1",
+    "knex": "^0.14.3",
+    "lodash": "^4.17.5",
+    "modular-gql": "^0.2.8",
+    "mysql2": "^1.5.2",
+    "objection": "^1.0.0",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "validate.js": "^0.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.1",
+    "mockdate": "^2.0.2",
+    "nodemon": "^1.15.0",
+    "nyc": "^11.4.1"
+  }
+}
